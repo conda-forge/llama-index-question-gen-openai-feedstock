@@ -1,5 +1,5 @@
 {% set name = "llama-index-question-gen-openai" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index_question_gen_openai-{{ version }}.tar.gz
-    sha256: d73074a3495c89cb6505d4f957d5c2878ce3327c7636277f6c4a434eff0f3fc6
+    sha256: 889b98ac5ccff146e51434b254934a5b2a26c71ca19334654a89fb9e8dbe498d
   # https://github.com/run-llama/llama_index/issues/10806
   - url: https://raw.githubusercontent.com/run-llama/llama_index/main/LICENSE
     sha256: 24f40b5190fdacabc24ddbb5f76364d15e4f030925220ea300d8a2dd4993c8cb
