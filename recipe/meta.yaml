@@ -1,5 +1,5 @@
 {% set name = "llama-index-question-gen-openai" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index_question_gen_openai-{{ version }}.tar.gz
-    sha256: 3dde1cecbd651000639c20031d7ea23334276aabb181cac40ff424f35e10465e
+    sha256: efd3b468232808e9d3474670aaeab00e41b90f75f52d0c9bfbf11207e0963d62
   # https://github.com/run-llama/llama_index/issues/10806
   - url: https://raw.githubusercontent.com/run-llama/llama_index/main/LICENSE
     sha256: 24f40b5190fdacabc24ddbb5f76364d15e4f030925220ea300d8a2dd4993c8cb
@@ -15,7 +15,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -24,9 +24,9 @@ requirements:
     - pip
   run:
     - python >=3.8.1,<4.0
-    - llama-index-core >=0.11.0,<0.12.0
-    - llama-index-program-openai >=0.2.0,<0.3.0
-    - llama-index-llms-openai >=0.2.0,<0.3.0
+    - llama-index-core >=0.12.0,<0.13.0
+    - llama-index-program-openai >=0.3.0,<0.4.0
+    - llama-index-llms-openai >=0.3.0,<0.4.0
 
 test:
   imports:
