@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index_question_gen_openai-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index_question_gen_openai-{{ version }}.tar.gz
     sha256: efd3b468232808e9d3474670aaeab00e41b90f75f52d0c9bfbf11207e0963d62
   # https://github.com/run-llama/llama_index/issues/10806
   - url: https://raw.githubusercontent.com/run-llama/llama_index/main/LICENSE
