@@ -15,15 +15,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.8.1,<4.0
+    - python >={{ python_min }},<4.0
     - llama-index-core >=0.12.0,<0.13.0
     - llama-index-program-openai >=0.3.0,<0.4.0
     - llama-index-llms-openai >=0.3.0,<0.4.0
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://llamaindex.ai
